@@ -2,15 +2,13 @@ import React from "react";
 import Col from "react-bootstrap/Col";
 import SkillsBar from "./SkillsBar";
 
-function SkillsSection({ skills, isScrolled }) {
+function SkillsSection({ skills}) {
   return (
     <>
       {skills.map((skill, index) => (
         <SkillsBar
           key={`${skill}-${index}`}
           skill={skill.name}
-          value={skill.value}
-          isScrolled={isScrolled}
         />
       ))}
     </>
@@ -35,5 +33,7 @@ function SkillsTab({ skills, isScrolled }) {
     </>
   );
 }
+
+
 
 export default SkillsTab;
